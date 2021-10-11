@@ -99,7 +99,7 @@ public class ProveedorDAO {
 
 	public ArrayList<ProveedorVO> listaDeProveedores() {
 		//lista que contendra el o los proveedors obtenidos
-		ArrayList<ProveedorVO> listaproveedors = new ArrayList<ProveedorVO>();
+		ArrayList<ProveedorVO> listaproveedores = new ArrayList<ProveedorVO>();
 		
 		//instancia de la conexión
 		Conexion conex = new Conexion();
@@ -120,7 +120,7 @@ public class ProveedorDAO {
 				newproveedor.setNombre_proveedor(res.getString("nombre_proveedor"));
 				newproveedor.setTelefono_proveedor(res.getString("telefono_proveedor"));
 
-				listaproveedors.add(newproveedor);
+				listaproveedores.add(newproveedor);
 			}
 			
 			//cerrar resultado, sentencia y conexión
@@ -142,7 +142,7 @@ public class ProveedorDAO {
 			System.out.println(e.getLocalizedMessage());
 		}
 
-		return listaproveedors;
+		return listaproveedores;
 	}
 
 	public void eliminarProveedor(Integer nit_proveedor) {
